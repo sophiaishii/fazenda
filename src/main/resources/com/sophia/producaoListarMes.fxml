@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.Button?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.ComboBox?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.sophia.ProducaoListarPorMesControle">
+    <children>
+        <!-- Título da tela -->
+        <Label layoutX="230.0" layoutY="20.0" text="Consultar Produções por Mês" style="-fx-font-size: 18px; -fx-font-weight: bold;" />
+
+        <!-- ComboBox para selecionar o mês -->
+        <Label layoutX="50.0" layoutY="50.0" text="Selecionar Mês:" />
+        <ComboBox fx:id="comboMeses" layoutX="150.0" layoutY="45.0" prefWidth="200.0" onAction="#filtrarPorMes" />
+
+        <!-- TableView para listar as produções -->
+        <TableView fx:id="tabelaProducao" layoutX="50.0" layoutY="70.0" prefHeight="250.0" prefWidth="500.0">
+            <!-- Colunas -->
+            <columns>
+                <TableColumn fx:id="colData" text="Data" prefWidth="150.0" />
+                <TableColumn fx:id="colQuantidade" text="Quantidade" prefWidth="150.0" />
+            </columns>
+        </TableView>
+
+        <!-- Botão para voltar ao menu -->
+        <Button layoutX="250.0" layoutY="330.0" mnemonicParsing="false" onAction="#voltarMenu" text="Voltar ao Menu" prefWidth="100.0"/>
+    </children>
+</AnchorPane>

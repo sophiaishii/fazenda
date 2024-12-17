@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.sophia.ProducaoListarPorDataControle">
+    <children>
+        <!-- Título -->
+        <Label layoutX="220.0" layoutY="20.0" text="Filtrar Produções por Data" style="-fx-font-size: 18px; -fx-font-weight: bold;" />
+
+        <!-- DatePicker para selecionar a data -->
+        <Label layoutX="50.0" layoutY="50.0" text="Selecionar Data:" />
+        <DatePicker fx:id="datePickerFiltro" layoutX="150.0" layoutY="45.0" prefWidth="200.0" />
+
+        <!-- Botão de Filtrar -->
+        <Button layoutX="370.0" layoutY="45.0" mnemonicParsing="false" onAction="#filtrarPorData" text="Filtrar" />
+
+        <!-- TableView para exibir produções -->
+        <TableView fx:id="tabelaProducao" layoutX="50.0" layoutY="90.0" prefHeight="250.0" prefWidth="500.0">
+            <columns>
+                <TableColumn fx:id="colVaca" text="Vaca" prefWidth="150.0" />
+                <TableColumn fx:id="colData" text="Data" prefWidth="150.0" />
+                <TableColumn fx:id="colQuantidade" text="Quantidade" prefWidth="150.0" />
+            </columns>
+        </TableView>
+
+        <!-- Botão para voltar -->
+        <Button layoutX="250.0" layoutY="350.0" mnemonicParsing="false" onAction="#voltarMenu" text="Voltar ao Menu" prefWidth="100.0"/>
+    </children>
+</AnchorPane>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.layout.HBox?>
+
+<VBox xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.sophia.CadastroControle" spacing="15" alignment="CENTER" style="-fx-padding: 20; -fx-alignment: center;">
+
+    <!-- Título Centralizado -->
+    <Label text="Cadastro" style="-fx-font-size: 24px; -fx-font-weight: bold;" alignment="CENTER" />
+
+    <!-- Caixa de Login -->
+    <HBox spacing="10" alignment="CENTER">
+        <Label text="Login:" prefWidth="80" alignment="CENTER_RIGHT" />
+        <TextField fx:id="campoLogin" promptText="Digite seu login" />
+    </HBox>
+
+    <!-- Caixa de Nome -->
+    <HBox spacing="10" alignment="CENTER">
+        <Label text="Nome:" prefWidth="80" alignment="CENTER_RIGHT" />
+        <TextField fx:id="campoNome" promptText="Digite seu nome" />
+    </HBox>
+
+    <!-- Caixa de Senha -->
+    <HBox spacing="10" alignment="CENTER">
+        <Label text="Senha:" prefWidth="80" alignment="CENTER_RIGHT" />
+        <PasswordField fx:id="campoSenha" promptText="Digite sua senha" />
+    </HBox>
+
+    <!-- Botões Centralizados -->
+    <HBox spacing="10" alignment="CENTER">
+        <Button text="Cadastrar" onAction="#fazerCadastro" />
+        <Button text="Voltar" onAction="#moverParaLogin" />
+    </HBox>
+</VBox>

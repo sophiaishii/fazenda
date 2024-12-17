@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.Button?>
+<?import javafx.geometry.Insets?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.sophia.VacaListarControle">
+    <children>
+        <!-- Título da tela -->
+        <Label layoutX="230.0" layoutY="20.0" text="Consultar Vacas" style="-fx-font-size: 18px; -fx-font-weight: bold;" />
+
+        <!-- TableView para listar as vacas -->
+        <TableView fx:id="tableVacas" layoutX="50.0" layoutY="70.0" prefHeight="250.0" prefWidth="500.0">
+            <!-- Coluna Brinco -->
+            <columns>
+                <TableColumn fx:id="colBrinco" text="Brinco" prefWidth="150.0" />
+                <TableColumn fx:id="colNome" text="Nome" prefWidth="150.0" />
+                <TableColumn fx:id="colRaca" text="Raça" prefWidth="150.0" />
+            </columns>
+        </TableView>
+
+        <!-- Botão para voltar ao menu -->
+        <Button layoutX="250.0" layoutY="330.0" mnemonicParsing="false" onAction="#voltarMenu" text="Voltar ao Menu" prefWidth="100.0"/>
+    </children>
+</AnchorPane>

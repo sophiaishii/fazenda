@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox prefHeight="481.0" prefWidth="834.0" stylesheets="@estilos.css" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.sophia.MenuControle">
+  <children>
+    <MenuBar styleClass="txt18" VBox.vgrow="NEVER">
+      <menus>
+        <Menu mnemonicParsing="false" text="Vacas">
+          <items>
+            <MenuItem mnemonicParsing="false" onAction="#vacaIncluir" text="Nova" />
+              <MenuItem mnemonicParsing="false" onAction="#vacaAlterar" text="Alterar" />
+              <MenuItem mnemonicParsing="false" onAction="#vacaExcluir" text="Excluir" />
+              <MenuItem mnemonicParsing="false" onAction="#vacaListar" text="Listar" />
+          </items>
+        </Menu>
+        <Menu mnemonicParsing="false" text="Usuários">
+          <items>
+            <MenuItem mnemonicParsing="false" onAction="#usuarioExcluir" text="Excluir" />
+            <MenuItem mnemonicParsing="false" onAction="#usuarioAlterar" text="Alterar" />
+            <MenuItem mnemonicParsing="false" onAction="#usuarioListar" text="Listar" />
+          </items>
+        </Menu>
+        <Menu mnemonicParsing="false" text="Produção">
+          <items>
+            <MenuItem mnemonicParsing="false" onAction="#producaoIncluir" text="Incluir" />
+                  <MenuItem mnemonicParsing="false" onAction="#producaoListarPorData" text="Listar por período" />
+                  <MenuItem mnemonicParsing="false" onAction="#producaoListarPorVaca" text="Listar por vaca " />
+                  <MenuItem mnemonicParsing="false" onAction="#producaoListarPorMes" text="Listar por mês" />
+                  <MenuItem mnemonicParsing="false" onAction="#producaoListarPorVacaEMes" text="Listar por vaca e mês" />
+          </items>
+        </Menu>
+            <Menu mnemonicParsing="false" text="Sair">
+               <items>
+                  <MenuItem mnemonicParsing="false" onAction="#sair" text="Fechar" />
+               </items>
+            </Menu>
+      </menus>
+    </MenuBar>
+    <AnchorPane maxHeight="-1.0" maxWidth="-1.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="-1.0" prefWidth="-1.0" stylesheets="@estilos.css" VBox.vgrow="ALWAYS" />
+  </children>
+</VBox>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane xmlns:fx="http://javafx.com/fxml" fx:controller="com.sophia.LoginControle">
+    <children>
+        <!-- Caixa principal centralizada -->
+        <VBox spacing="10" layoutX="100" layoutY="100" alignment="CENTER">
+            <!-- Rótulo principal -->
+            <Label text="Login" style="-fx-font-size: 24px; -fx-font-weight: bold;" />
+            
+            <!-- Campo de login -->
+            <HBox spacing="10">
+                <Label text="Login:" prefWidth="50" />
+                <TextField fx:id="campoLogin" promptText="Digite seu login" />
+            </HBox>
+            
+            <!-- Campo de senha -->
+            <HBox spacing="10">
+                <Label text="Senha:" prefWidth="50" />
+                <PasswordField fx:id="campoSenha" promptText="Digite sua senha" />
+            </HBox>
+            
+            <!-- Botão de ação -->
+            <Button text="Entrar" onAction="#fazerLogin" />
+            <Button text="Cadastrar" onAction="#fazerCadastro" />
+        </VBox>
+    </children>
+</AnchorPane>
